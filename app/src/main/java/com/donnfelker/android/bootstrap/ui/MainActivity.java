@@ -55,6 +55,7 @@ public class MainActivity extends BootstrapFragmentActivity {
     private CharSequence drawerTitle;
     private CharSequence title;
     private NavigationDrawerFragment navigationDrawerFragment;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -114,9 +115,11 @@ public class MainActivity extends BootstrapFragmentActivity {
                     getFragmentManager().findFragmentById(R.id.navigation_drawer);
 
             // Set up the drawer.
-            navigationDrawerFragment.setUp(
-                    R.id.navigation_drawer,
-                    (DrawerLayout) findViewById(R.id.drawer_layout));
+//            navigationDrawerFragment.setUp(
+//                    R.id.navigation_drawer,
+//                    (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
+            navigationDrawerFragment.setup(R.id.navigation_drawer,
+                                           (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
         }
 
 
@@ -131,8 +134,12 @@ public class MainActivity extends BootstrapFragmentActivity {
     private void setupToolbar() {
         // As we're using a Toolbar, we should retrieve it and set it
         // to be our ActionBar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Toolbar Title");
+        getSupportActionBar().setSubtitle("Toolbar Subtitle");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
     }
 
