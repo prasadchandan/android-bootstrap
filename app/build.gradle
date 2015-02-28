@@ -56,6 +56,7 @@ dependencies {
     compile 'com.beardedhen:androidbootstrap:+'
     compile 'com.afollestad:material-dialogs:0.6.3.1'
     compile 'com.github.johnkil.android-robototextview:robototextview:2.3.0'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
     compile('com.mikepenz.materialdrawer:library:0.9.8@aar') {
         transitive = true
     }

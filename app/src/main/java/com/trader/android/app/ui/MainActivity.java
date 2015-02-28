@@ -16,6 +16,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 import com.trader.android.app.BootstrapServiceProvider;
 import com.trader.android.app.R;
 import com.trader.android.app.events.NavItemSelectedEvent;
@@ -86,32 +87,36 @@ public class MainActivity extends BootstrapFragmentActivity {
 
         setupToolbar();
 
+//        SystemBarTintManager tintManager = new SystemBarTintManager(this);
+//        tintManager.setStatusBarTintResource(R.color.primary_dark);
+//        tintManager.setStatusBarTintEnabled(true);
+
         if(!isTablet()) {
 
-            drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-            drawerToggle = new ActionBarDrawerToggle(
-                    this,                                        /* Host activity */
-                    drawerLayout,                                /* DrawerLayout object */
-                    R.drawable.ic_drawer,                        /* nav drawer icon to replace 'Up' caret */
-                    R.string.navigation_drawer_open,             /* "open drawer" description */
-                    R.string.navigation_drawer_close) {          /* "close drawer" description */
-
-                /** Called when a drawer has settled in a completely closed state. */
-                public void onDrawerClosed(View view) {
-                    getActionBar().setTitle(title);
-                    invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-                }
-
-                /** Called when a drawer has settled in a completely open state. */
-                public void onDrawerOpened(View drawerView) {
-                    getActionBar().setTitle(drawerTitle);
-                    invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-                }
-            };
+//            drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+//
+//            drawerToggle = new ActionBarDrawerToggle(
+//                    this,                                        /* Host activity */
+//                    drawerLayout,                                /* DrawerLayout object */
+//                    R.drawable.ic_drawer,                        /* nav drawer icon to replace 'Up' caret */
+//                    R.string.navigation_drawer_open,             /* "open drawer" description */
+//                    R.string.navigation_drawer_close) {          /* "close drawer" description */
+//
+//                /** Called when a drawer has settled in a completely closed state. */
+//                public void onDrawerClosed(View view) {
+//                    getActionBar().setTitle(title);
+//                    invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+//                }
+//
+//                /** Called when a drawer has settled in a completely open state. */
+//                public void onDrawerOpened(View drawerView) {
+//                    getActionBar().setTitle(drawerTitle);
+//                    invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+//                }
+//            };
 
             // Set the drawer toggle as the DrawerListener
-            drawerLayout.setDrawerListener(drawerToggle);
+//            drawerLayout.setDrawerListener(drawerToggle);
 
 //            navigationDrawerFragment = (NavigationDrawerFragment)
 //                    getFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -176,6 +181,9 @@ public class MainActivity extends BootstrapFragmentActivity {
                         }
                     })
                     .build();
+
+            //disable scrollbar
+            result.getListView().setVerticalScrollBarEnabled(false);
             ///
         }
         checkAuth();
@@ -203,7 +211,7 @@ public class MainActivity extends BootstrapFragmentActivity {
 
         if(!isTablet()) {
             // Sync the toggle state after onRestoreInstanceState has occurred.
-            drawerToggle.syncState();
+//            drawerToggle.syncState();
         }
     }
 
@@ -212,7 +220,7 @@ public class MainActivity extends BootstrapFragmentActivity {
     public void onConfigurationChanged(final Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         if(!isTablet()) {
-            drawerToggle.onConfigurationChanged(newConfig);
+            //drawerToggle.onConfigurationChanged(newConfig);
         }
     }
 
@@ -277,7 +285,8 @@ public class MainActivity extends BootstrapFragmentActivity {
     @Override
     public boolean onOptionsItemSelected(final MenuItem item) {
 
-        if (!isTablet() && drawerToggle.onOptionsItemSelected(item)) {
+        //if (!isTablet() && drawerToggle.onOptionsItemSelected(item)) {
+        if (!isTablet()) {
             return true;
         }
 

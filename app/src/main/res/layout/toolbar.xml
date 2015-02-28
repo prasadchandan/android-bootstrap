@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/primary"
-    android:minHeight="?android:attr/actionBarSize"/>
+    android:minHeight="?android:attr/actionBarSize"
+    android:elevation="4dp"/>
 
     <!--android:minHeight="@dimen/abc_action_bar_default_height_material"/>-->
 

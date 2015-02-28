@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+
+        <!-- The main content view -->
+        <FrameLayout
+                android:id="@+id/layout_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </FrameLayout>
+
+        <!-- The navigation drawer -->
+        <!-- android:layout_gravity="start" tells DrawerLayout to treat
+        this as a sliding drawer on the left side for left-to-right
+        languages and on the right side for right-to-left languages.
+        If you're not building against API 17 or higher, use
+        android:layout_gravity="left" instead.
+
+        The drawer is given a fixed width in dp and extends the full height of
+        the container.
+
+        Your drawer view. This can be any view.
+        As we have set fitSystemWindows=true
+        this will be displayed under the status bar. -->
+        <fragment android:id="@+id/navigation_drawer"
+                  android:layout_width="@dimen/navigation_drawer_width"
+                  android:layout_height="match_parent"
+                  android:layout_gravity="left|start"
+                  android:name="com.trader.android.app.ui.NavigationDrawerFragment"
+                  tools:layout="@layout/fragment_navigation_drawer" />
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

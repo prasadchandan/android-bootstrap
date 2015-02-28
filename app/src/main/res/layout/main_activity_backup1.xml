@@ -1,0 +1,75 @@
+<!-- The important thing to note here is the added fitSystemWindows -->
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false">
+
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/activity_main_toolbar_container"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:paddingTop="@dimen/tool_bar_top_padding">-->
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="?attr/colorPrimary"-->
+            <!--android:elevation="4dp"/>-->
+    <!--</RelativeLayout>-->
+
+    <!-- Your normal content view -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="?attr/colorPrimary"
+        android:paddingTop="@dimen/tool_bar_top_padding">
+
+        <!-- We use a Toolbar so that our drawer can be displayed
+             in front of the action bar -->
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"/>
+
+        <!-- The rest of your content view -->
+
+        <FrameLayout
+            android:id="@+id/layout_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Your drawer view. This can be any view, LinearLayout
+         is just an example. As we have set fitSystemWindows=true
+         this will be displayed under the status bar. -->
+    <LinearLayout
+        android:id="@+id/navigation_drawer"
+        android:layout_width="304dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+
+        <!-- Your drawer content -->
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
