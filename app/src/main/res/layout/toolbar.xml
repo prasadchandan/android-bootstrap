@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.Toolbar
-    style="@style/ToolBarStyle"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ToolBarStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/colorPrimary"
-    android:minHeight="@dimen/abc_action_bar_default_height_material"/>
+    android:background="@color/primary"
+    android:minHeight="?android:attr/actionBarSize"/>
+
+    <!--android:minHeight="@dimen/abc_action_bar_default_height_material"/>-->
+
+

@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"/>
 
     <android.support.v4.widget.DrawerLayout
             android:id="@+id/drawer_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
 
         <!-- The main content view -->
         <FrameLayout
@@ -49,7 +58,8 @@
                   android:layout_width="@dimen/navigation_drawer_width"
                   android:layout_height="match_parent"
                   android:layout_gravity="left|start"
-                  android:name="com.donnfelker.android.bootstrap.ui.NavigationDrawerFragment" />
+                  android:name="com.trader.android.app.ui.NavigationDrawerFragment"
+            tools:layout="@layout/fragment_navigation_drawer" />
 
     </android.support.v4.widget.DrawerLayout>
 </LinearLayout>

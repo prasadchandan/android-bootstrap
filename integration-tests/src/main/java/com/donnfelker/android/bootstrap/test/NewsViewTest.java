@@ -1,13 +1,13 @@
 
 
-package com.donnfelker.android.bootstrap.test;
+package com.trader.android.app.test;
 
-import static com.donnfelker.android.bootstrap.core.Constants.Extra.NEWS_ITEM;
+import static com.trader.android.app.core.Constants.Extra.NEWS_ITEM;
 import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.donnfelker.android.bootstrap.core.News;
-import com.donnfelker.android.bootstrap.ui.CarouselActivity;
+import com.trader.android.app.core.News;
+import com.trader.android.app.ui.CarouselActivity;
 
 
 /**
@@ -16,7 +16,7 @@ import com.donnfelker.android.bootstrap.ui.CarouselActivity;
 public class NewsViewTest extends ActivityInstrumentationTestCase2<CarouselActivity> {
 
     /**
-     * Create test for {@link com.donnfelker.android.bootstrap.ui.CarouselActivity}
+     * Create test for {@link com.trader.android.app.ui.CarouselActivity}
      */
     public NewsViewTest() {
         super(CarouselActivity.class);

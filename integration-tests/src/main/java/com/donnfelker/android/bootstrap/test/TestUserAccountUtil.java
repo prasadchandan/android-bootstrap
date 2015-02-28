@@ -1,16 +1,16 @@
 
 
-package com.donnfelker.android.bootstrap.test;
+package com.trader.android.app.test;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Instrumentation;
 import android.content.Context;
 import android.util.Log;
-import static com.donnfelker.android.bootstrap.core.Constants.Auth.*;
+import static com.trader.android.app.core.Constants.Auth.*;
 
-import com.donnfelker.android.bootstrap.tests.R;
-import com.donnfelker.android.bootstrap.util.Ln;
+import com.trader.android.app.tests.R;
+import com.trader.android.app.util.Ln;
 
 
 /**

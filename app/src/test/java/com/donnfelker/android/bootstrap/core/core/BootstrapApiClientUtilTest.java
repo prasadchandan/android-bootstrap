@@ -1,12 +1,12 @@
 
 
-package com.donnfelker.android.bootstrap.core.core;
+package com.trader.android.app.core.core;
 
 import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
-import com.donnfelker.android.bootstrap.core.BootstrapService;
-import com.donnfelker.android.bootstrap.core.User;
+import com.trader.android.app.core.BootstrapService;
+import com.trader.android.app.core.User;
 
 import java.util.List;
 

@@ -1,13 +1,13 @@
 
 
-package com.donnfelker.android.bootstrap.test;
+package com.trader.android.app.test;
 
 import android.test.ActivityInstrumentationTestCase2;
 import android.view.View;
 import android.widget.Button;
 
-import com.donnfelker.android.bootstrap.authenticator.BootstrapAuthenticatorActivity;
-import com.donnfelker.android.bootstrap.R;
+import com.trader.android.app.authenticator.BootstrapAuthenticatorActivity;
+import com.trader.android.app.R;
 
 
 /**
@@ -16,7 +16,7 @@ import com.donnfelker.android.bootstrap.R;
 public class BootstrapAuthenticatorTest extends ActivityInstrumentationTestCase2<BootstrapAuthenticatorActivity> {
 
     /**
-     * Create test for {@link com.donnfelker.android.bootstrap.authenticator.BootstrapAuthenticatorActivity}
+     * Create test for {@link com.trader.android.app.authenticator.BootstrapAuthenticatorActivity}
      */
     public BootstrapAuthenticatorTest() {
         super(BootstrapAuthenticatorActivity.class);

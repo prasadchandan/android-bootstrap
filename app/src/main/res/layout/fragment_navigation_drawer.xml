@@ -4,7 +4,8 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:choiceMode="singleChoice"
-          android:divider="@color/navigation_drawer_item_separator"
           android:dividerHeight="1dp"
-          android:background="#1f1f1f"
-          tools:context="com.donnfelker.android.bootstrap.ui.NavigationDrawerFragment" />
+          android:background="@color/icons"
+          android:paddingTop="16dp"
+          android:paddingBottom="16dp"
+          tools:context="com.trader.android.app.ui.NavigationDrawerFragment" />

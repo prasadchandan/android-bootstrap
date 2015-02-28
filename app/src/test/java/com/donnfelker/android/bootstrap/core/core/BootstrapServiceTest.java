@@ -1,16 +1,16 @@
 
 
-package com.donnfelker.android.bootstrap.core.core;
+package com.trader.android.app.core.core;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.doReturn;
 
-import com.donnfelker.android.bootstrap.core.BootstrapService;
-import com.donnfelker.android.bootstrap.core.CheckIn;
-import com.donnfelker.android.bootstrap.core.News;
-import com.donnfelker.android.bootstrap.core.User;
-import com.donnfelker.android.bootstrap.core.UserAgentProvider;
+import com.trader.android.app.core.BootstrapService;
+import com.trader.android.app.core.CheckIn;
+import com.trader.android.app.core.News;
+import com.trader.android.app.core.User;
+import com.trader.android.app.core.UserAgentProvider;
 import com.github.kevinsawicki.http.HttpRequest;
 
 import java.io.BufferedReader;
@@ -26,7 +26,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 /**
- * Unit tests of {@link com.donnfelker.android.bootstrap.core.BootstrapService}
+ * Unit tests of {@link com.trader.android.app.core.BootstrapService}
  */
 @RunWith(MockitoJUnitRunner.class)
 public class BootstrapServiceTest {

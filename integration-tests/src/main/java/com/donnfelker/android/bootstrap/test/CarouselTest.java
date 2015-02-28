@@ -1,10 +1,10 @@
 
 
-package com.donnfelker.android.bootstrap.test;
+package com.trader.android.app.test;
 
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.donnfelker.android.bootstrap.ui.CarouselActivity;
+import com.trader.android.app.ui.CarouselActivity;
 
 
 /**
